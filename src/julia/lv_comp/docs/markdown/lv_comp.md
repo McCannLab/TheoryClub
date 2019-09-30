@@ -9,6 +9,7 @@ using Parameters
 using DifferentialEquations
 using ForwardDiff
 using Plots
+pyplot();
 ```
 
 # Introduction/Overview
@@ -49,7 +50,7 @@ end
 end
 ```
 
-# Evaluationg the model -- time series
+# Evaluating the model -- time series
 
 ```@example lv_comp
 let
@@ -112,19 +113,28 @@ spar = Dict(
     :K2 => K2);
 ```
 
-we need to make symbolic versions of the model equations. We do this by calling the function with
-the symbolic parameters. the last parameter could be anythign as the time (`t`) argument is not
-used. I have set it to `NaN` which is a name for not a number.
+we need to make symbolic versions of the model equations. We do this by calling
+the function with the symbolic parameters. the last parameter could be anything
+as the time (`t`) argument is not used. I have set it to `NaN` which is a name
+for not a number.
 
 ```@example lv_comp
 f1, f2 = lv_comp([u1, u2], spar, NaN)
+```
 
+```@example lv_comp
 sympy.solve(f1, u1)
+```
 
+```@example lv_comp
 sympy.solve(f1, u2)
+```
 
+```@example lv_comp
 sympy.solve(f2, u1)
+```
 
+```@example lv_comp
 sympy.solve(f2, u2)
 ```
 
@@ -148,17 +158,21 @@ function iso1(u2, p)
     @unpack α12, K1 = p
     return K1 - α12 * u2 / K1
 end
+```
 
+```@example lv_comp
 function iso2(u2, p)
     @unpack α21, K2 = p
     return (K2 - u2) / α21
 end
+```
 
+```@example lv_comp
 let
     p = LVPar()
     u2s = range(0, 5, length = 100)
 
-    plot(u2s, [iso1(u2, p) for u2 in u2s], label = "u1 = 0")
+    fig = plot(u2s, [iso1(u2, p) for u2 in u2s], label = "u1 = 0")
     plot!(u2s, [iso2(u2, p) for u2 in u2s], label = "u2 = 0")
     xlims!(0, 3)
     ylims!(0, 5)
