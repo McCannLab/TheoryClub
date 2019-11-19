@@ -16,9 +16,6 @@ jobs:
       - name: Build GitBook
         run: |-
           Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
-  publish:
-    needs: [build]
-    steps:
       - name: Deploy GitBook to GitHub Pages
         uses: peaceiris/actions-gh-pages@v2.5.0
         env:
