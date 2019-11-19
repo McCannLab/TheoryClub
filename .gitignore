@@ -1,2 +1,8 @@
-
+.DS_Store
 src/julia/lv_comp/.ipynb_checkpoints/
+.Rproj.user
+.Rhistory
+.RData
+_publish.R
+_book
+_bookdown_files
