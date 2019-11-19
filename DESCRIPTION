@@ -1,13 +1,10 @@
 Package: placeholder
 Type: Book
-Title: ignored
+Title: TheoryClub
 Version: 0.0.1
 Imports:
   bookdown,
-  deSolve,
-  graphicsutils,
   latex2exp,
-  odein
+  odin
 Remotes:
-  rstudio/bookdown,
-  inSileco/graphicsutils
+  rstudio/bookdown
