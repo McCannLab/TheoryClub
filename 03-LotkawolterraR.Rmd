@@ -1,0 +1,125 @@
+# Introduction to Lotka-Volterra Competition with R
+
+
+
+## Solving Differential Equations with R
+
+There are [several solvers of differential equation R packages](https://www.r-pkg.org/search.html?q=differential+equations), among those:
+
+1. [deSolve](https://cran.r-project.org/web/packages/deSolve/index.html);
+2. [odeintr](https://github.com/thk686/odeintr);
+3. [odein](https://cran.r-project.org/web/packages/odin/index.html);
+4. [diffeqr](https://cran.r-project.org/web/packages/diffeqr/index.html) an interface to the 'DifferentialEquations.jl' Julia package.
+
+Below, we will be using [odein](https://cran.r-project.org/web/packages/odin/index.html) :
+
+```{r}
+library(odin)
+```
+
+
+## Model and Parameters
+
+The model we will use is the classical Lotka-Voltera competition model:
+
+
+$$
+\left\{
+\begin{array}{l}
+  \dot{R_1} = r_1R_1*(1 - \frac{R_1+\alpha_{12}R_2}{K1})rR - aCR \\
+  \dot{R_2} = r_2R_2*(1 - \frac{R_2+\alpha_{21}R_1}{K2})eaCR - mC
+\end{array}
+\right.
+$$
+
+Using **odin**, here is what to do to create the model
+
+```{R}
+lv_comp <- odin({
+  ## Derivatives
+  deriv(y1) <- y1 * r1 * (1 - (y1 + alpha12 * y2) / K1)
+  deriv(y2) <- y2 * r2 * (1 - (y2 + alpha21 * y1) / K2)
+
+  ## Initial conditions
+  initial(y1) <- .5
+  initial(y2) <- .5
+
+  ## parameters
+  alpha12 <- 0.8
+  alpha21 <- 0.3
+  r1 <- 1.0
+  r2 <- 2.0
+  K1 <- 1.5
+  K2 <- 1.0
+})
+```
+
+Then `lv_comp()` creates a solver for the problem described below:
+
+```{R}
+mod <- lv_comp()
+mod
+```
+
+
+## Evaluating the model -- time series
+
+Then, to solve the problem, one must create a sequence of values and used the `run` function of the solver:
+
+```{R}
+# Sequence of time values
+t <- seq(0, 100, by = 1e-4)
+y <- mod$run(t)
+```
+
+Let's do a quick plot
+
+```{R}
+# few tweaks
+par(mar = c(4.1, 5.1, 0.5, 0.5), las = 1)
+# colors
+pal <- c("#009afa", "#e99172")
+matplot(y[, 1], y[, -1], xlab = "Time", ylab = "Abundance",
+        type = "l", col = pal, lty = 1, lwd = 3)
+legend("bottomright", c("R1", "R2"), col = pal, lwd = 3, bty = "n", cex = 1.5)
+```
+
+
+## Equilibria and Isoclines
+
+Skipped! Note that there are ways of obtaining Jacobian in R (see [`JacobianCpp()` in odeintr](https://cran.r-project.org/web/packages/odeintr/odeintr.pdf) and the function `D()` in the package stats that should already be installed), but overall I (Kevin Cazelles) would say that R is not really well-equipped for such tasks and I would use Julia or [SageMath](http://www.sagemath.org/) rather than R to do symbolic computation (at large).
+
+
+## Now plot the isoclines
+
+We will again use the manipulate function to see how our parameters change the isoclines. This can immediately tell us a lot about our equilibria and stability.
+
+```{R}
+draw_isocline <- function(mod, pal) {
+  pr <- mod$contents()
+  abline(a = pr$K1, b = -pr$alpha12, col = pal[1])
+  abline(a = pr$K2/pr$alpha21, b = -1/pr$alpha21, col = pal[2])
+}
+```
+
+Then let's do the final plot:
+
+
+```{R}
+R1 = c(0, 3)
+R2 = c(0, 5)
+plot(R1, R2, type = "n")
+draw_isocline(mod, pal)
+#
+points(.5, .5, pch = 19, cex = 2)
+text(.5, .5, "1", pos = 3)
+lines(y[,3], y[,2], type = "l", lwd = 3)
+
+# with a different starting point
+y2 <- mod$run(t, y = c(4, 2))
+points(2, 4, pch = 19, cex = 2, col = "grey40")
+text(2, 4, "2", col = "grey40", pos = 3)
+lines(y2[,3], y2[,2], type = "l", lwd = 3, col = "grey40")
+
+```
+

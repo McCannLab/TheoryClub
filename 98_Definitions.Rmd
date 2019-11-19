@@ -1,0 +1,43 @@
+# Definitions
+
+- State variable:
+
+- Parameter:
+
+- Equilibrium:
+
+- Trivial equilibrium:
+
+- Isocline:
+
+- Nullcline:
+
+- State space:
+
+- Phase space:
+
+- Trajectory:
+
+- Vector field:
+
+- Bifurcation:
+
+- Jacobian matrix:
+
+- Linearization:
+
+- Eigenvalue:
+
+- Eigenvector:
+
+- Diagonalization:
+
+- Characteristic equation:
+
+- Polynomial:
+
+- Determinant:
+
+- Quadratic equation:
+
+- Quadratic formula:

@@ -1,0 +1,12 @@
+book_filename: "theoryclub"
+repo: https://github.com/McCannLab/TheoryClub
+output_dir: _book
+clean: [packages.bib, book.bib]
+delete_merged_file: false
+language:
+  label:
+    fig: "Fig "
+    tab: "Tab "
+  ui:
+    edit: "Edit"
+    chapter_name: "Chapter "

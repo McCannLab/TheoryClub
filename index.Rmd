@@ -1,0 +1,47 @@
+---
+title: "Theory Club Notes"
+author: "McCann Lab"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: McCannLab/aboutDE
+description: "A notebook for the McCann Lab Theory Club."
+---
+
+# Prerequisites {-}
+
+## What is this document for? {-}
+
+A notebook to put notes for our Theory Club.
+
+## How these web pages were created? {-}
+
+A notebook to put notes for our Theory Club.
+
+This book was generated using [bookdown](https://bookdown.org/yihui/bookdown/)
+[@xie2015] (see https://github.com/rstudio/bookdown-demo for a minimal example).
+
+
+
+
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
+
+```{r setup, echo = F}
+knitr::opts_chunk$set(
+  comment = "#>",
+  fig.align = "center",
+  collapse = TRUE,
+  warning = FALSE,
+  message = FALSE
+)
+```
