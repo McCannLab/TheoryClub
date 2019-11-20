@@ -1,11 +1,12 @@
 # :book: McCann Theory Club
 
-[![Build Status](https://travis-ci.org/McCannLab/aboutDE.svg?branch=devel)](https://travis-ci.org/McCannLab/aboutDE)
+[![Actions Status](https://github.com/McCannLab/TheoryClub/workflows/Render%20and%20deploy%20GitBook/badge.svg)](https://github.com/McCannLab/TheoryClub/actions)
+
 
 
 ## Installation
 
-To generate the book locally, first install `bookdown` and then run the following (with R):
+To generate the book locally, first install `bookdown` and then run the following commands (in R):
 
 ```r
 install.packages(c("bookdown", "odein"))
@@ -15,7 +16,6 @@ bookdown::render_book('index.Rmd', 'bookdown::gitbook')
 
 ## Scripts
 
-Script (Julia/R/Mathematica) are stored in the `scr` folder. 
-
+Script (written in Julia, Mathematica and R) are stored in the `scr` folder.
 
 
