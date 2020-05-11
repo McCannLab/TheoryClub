@@ -23,11 +23,23 @@ spar = Dict(
 # used. I have set it to `NaN` which is a name for not a number.
 f1, f2 = lv_comp([u1, u2], spar, NaN)
 #-
-sympy.solve(f1, u1)
+SymPy.solve(f1, u1)
 #-
-sympy.solve(f1, u2)
+SymPy.solve(f1, u2)
 #-
-sympy.solve(f2, u1)
+SymPy.solve(f2, u1)
 #-
-sympy.solve(f2, u2)
+SymPy.solve(f2, u2)
 #-
+
+#### Another version of above (does the same thing but not as elegant)
+
+# x, y, r1, r2, k1, k2, a12, a21 = symbols("x, y, r1, r2, k1, k2, a12, a21", real = true)
+#
+# f(x, y) = x * r1 * (1 - (x + a12 * y) / k1)
+# g(x ,y) = y * r2 * (1 - (y + a21 * x) / k2)
+#
+# SymPy.solve(f(x,y),x)
+# SymPy.solve(f(x,y),y)
+# SymPy.solve(g(x,y),x)
+# SymPy.solve(g(x,y),y)
