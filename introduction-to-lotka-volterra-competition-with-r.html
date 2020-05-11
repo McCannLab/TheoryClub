@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
 <head>
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Introduction to Lotka-Volterra Competition with R | Theory Club Notes</title>
   <meta name="description" content="A notebook for the McCann Lab Theory Club." />
-  <meta name="generator" content="bookdown 0.16.2 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18.3 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Introduction to Lotka-Volterra Competition with R | Theory Club Notes" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="McCann Lab" />
 
 
-<meta name="date" content="2019-11-28" />
+<meta name="date" content="2020-05-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -215,7 +215,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb2-15" data-line-number="15">  K1 &lt;-<span class="st"> </span><span class="fl">1.5</span></a>
 <a class="sourceLine" id="cb2-16" data-line-number="16">  K2 &lt;-<span class="st"> </span><span class="fl">1.0</span></a>
 <a class="sourceLine" id="cb2-17" data-line-number="17">})</a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; gcc -I&quot;/usr/local/lib/R/include&quot; -DNDEBUG   -I/usr/local/include  -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c odin_adaf3c53.c -o odin_adaf3c53.o</span></a>
+<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; gcc -I&quot;/usr/local/lib/R/include&quot; -DNDEBUG   -I/usr/local/include   -fpic  -g -O2 -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -g  -c odin_adaf3c53.c -o odin_adaf3c53.o</span></a>
 <a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt; gcc -shared -L/usr/local/lib/R/lib -L/usr/local/lib -o odin_adaf3c53.so odin_adaf3c53.o -L/usr/local/lib/R/lib -lR</span></a></code></pre></div>
 <p>Then <code>lv_comp()</code> creates a solver for the problem described below:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">mod &lt;-<span class="st"> </span><span class="kw">lv_comp</span>()</a>
