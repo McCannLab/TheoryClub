@@ -1,0 +1,14 @@
+intro
+theory-in-ecology
+dynamical-systems-theory-getting-started
+introduction-to-lotka-volterra-competition-with-r
+solving-differential-equations-with-r
+model-and-parameters
+evaluating-the-model-time-series
+equilibria-and-isoclines
+now-plot-the-isoclines
+definitions
+resource
+books
+websites
+videos
