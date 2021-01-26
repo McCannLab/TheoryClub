@@ -19,7 +19,7 @@ spar = Dict(
     :a => a,
     :h => h,
     :e => e,
-    :m => m);
+    :m => m)
 
 # we need to make symbolic versions of the model equations. We do this by calling the function with
 # the symbolic parameters. the last parameter could be anythign as the time (`t`) argument is not

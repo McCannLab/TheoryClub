@@ -70,5 +70,31 @@ function cr_expII_model(u, p, t)
     return du
 end
 
+#### Code that is used in multiple scripts ####
 
+function expII_resiso(R, p)
+    @unpack r, a, h = p
+    return R * h * r + r / a
+end
+
+function expII_coniso(p)
+    @unpack m, a, e, h = p
+    return m / (a * (e - h * m))
+end
+
+# Function to calculate the jacobian at any point (with any model)
+function jac(u, model, p)
+    ForwardDiff.jacobian(u -> model(u, p, NaN), u)
+end
+
+# Function to calculate maximum eigenvalue (real part)
+λ_stability(M) = maximum(real.(eigvals(M)))
+
+# Function to find the interior equilibrium value for any efficiency value (for CR_logII model)
+function logII_eq(p)
+    @unpack r, k, a, h, m, e = p
+    R = m / (a * (e - h * m))
+    C = r * (-R^2 * a * h + R * a * h * k - R + k) / (a * k)
+    return [R, C]
+end
 
