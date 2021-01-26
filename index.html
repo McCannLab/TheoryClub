@@ -24,7 +24,7 @@
 <meta name="author" content="McCann Lab" />
 
 
-<meta name="date" content="2021-01-19" />
+<meta name="date" content="2021-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 
 <link rel="next" href="intro.html"/>
+<script src="libs/header-attrs-2.6.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,24 +51,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -87,7 +86,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -120,6 +119,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -137,15 +158,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li> <a href="./">Theory Club</a> </li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prerequisites</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prerequisites</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-this-document-for"><i class="fa fa-check"></i>What is this document for?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-these-web-pages-were-created"><i class="fa fa-check"></i>How these web pages were created?</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#theory-in-ecology"><i class="fa fa-check"></i><b>1.1</b> Theory in ecology</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="dynamical-systems-theory-getting-started.html"><a href="dynamical-systems-theory-getting-started.html"><i class="fa fa-check"></i><b>2</b> Dynamical Systems Theory – Getting Started</a></li>
-<li class="chapter" data-level="3" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html"><i class="fa fa-check"></i><b>3</b> Introduction to Lotka-Volterra Competition with R</a><ul>
+<li class="chapter" data-level="3" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html"><i class="fa fa-check"></i><b>3</b> Introduction to Lotka-Volterra Competition with R</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html#solving-differential-equations-with-r"><i class="fa fa-check"></i><b>3.1</b> Solving Differential Equations with R</a></li>
 <li class="chapter" data-level="3.2" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html#model-and-parameters"><i class="fa fa-check"></i><b>3.2</b> Model and Parameters</a></li>
 <li class="chapter" data-level="3.3" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html#evaluating-the-model-time-series"><i class="fa fa-check"></i><b>3.3</b> Evaluating the model – time series</a></li>
@@ -153,7 +177,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html#now-plot-the-isoclines"><i class="fa fa-check"></i><b>3.5</b> Now plot the isoclines</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>4</b> Definitions</a></li>
-<li class="chapter" data-level="5" data-path="resource.html"><a href="resource.html"><i class="fa fa-check"></i><b>5</b> Resources</a><ul>
+<li class="chapter" data-level="5" data-path="resource.html"><a href="resource.html"><i class="fa fa-check"></i><b>5</b> Resources</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="resource.html"><a href="resource.html#books"><i class="fa fa-check"></i><b>5.1</b> Books</a></li>
 <li class="chapter" data-level="5.2" data-path="resource.html"><a href="resource.html#websites"><i class="fa fa-check"></i><b>5.2</b> Websites</a></li>
 <li class="chapter" data-level="5.3" data-path="resource.html"><a href="resource.html#videos"><i class="fa fa-check"></i><b>5.3</b> Videos</a></li>
@@ -181,7 +206,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="header">
 <h1 class="title">Theory Club Notes</h1>
 <p class="author"><em>McCann Lab</em></p>
-<p class="date"><em>2021-01-19</em></p>
+<p class="date"><em>2021-01-26</em></p>
 </div>
 <div id="prerequisites" class="section level1 unnumbered">
 <h1>Prerequisites</h1>
@@ -193,14 +218,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2>How these web pages were created?</h2>
 <p>A notebook to put notes for our Theory Club.</p>
 <p>This book was generated using <a href="https://bookdown.org/yihui/bookdown/">bookdown</a>
-<span class="citation">(Xie <a href="#ref-xie2015" role="doc-biblioref">2015</a>)</span> (see <a href="https://github.com/rstudio/bookdown-demo" class="uri">https://github.com/rstudio/bookdown-demo</a> for a minimal example).</p>
+<span class="citation">(<a href="#ref-xie2015" role="doc-biblioref">Xie 2015</a>)</span> (see <a href="https://github.com/rstudio/bookdown-demo" class="uri">https://github.com/rstudio/bookdown-demo</a> for a minimal example).</p>
 
 </div>
 </div>
 <h3>References</h3>
-<div id="refs" class="references">
-<div id="ref-xie2015">
-<p>Xie, Yihui. 2015. <em>Dynamic Documents with R and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.</p>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-xie2015" class="csl-entry">
+Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.name/knitr/">http://yihui.name/knitr/</a>.
 </div>
 </div>
             </section>

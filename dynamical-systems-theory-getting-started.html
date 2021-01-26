@@ -24,7 +24,7 @@
 <meta name="author" content="McCann Lab" />
 
 
-<meta name="date" content="2021-01-19" />
+<meta name="date" content="2021-01-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -33,6 +33,7 @@
   
 <link rel="prev" href="intro.html"/>
 <link rel="next" href="introduction-to-lotka-volterra-competition-with-r.html"/>
+<script src="libs/header-attrs-2.6.6/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,24 +51,22 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
 <style type="text/css">
-code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
-code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-code.sourceCode { white-space: pre-wrap; }
-code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -87,7 +86,7 @@ pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-le
 div.sourceCode
   {   }
 @media screen {
-code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -120,6 +119,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -137,15 +158,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li> <a href="./">Theory Club</a> </li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prerequisites</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prerequisites</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-this-document-for"><i class="fa fa-check"></i>What is this document for?</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#how-these-web-pages-were-created"><i class="fa fa-check"></i>How these web pages were created?</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#theory-in-ecology"><i class="fa fa-check"></i><b>1.1</b> Theory in ecology</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="dynamical-systems-theory-getting-started.html"><a href="dynamical-systems-theory-getting-started.html"><i class="fa fa-check"></i><b>2</b> Dynamical Systems Theory – Getting Started</a></li>
-<li class="chapter" data-level="3" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html"><i class="fa fa-check"></i><b>3</b> Introduction to Lotka-Volterra Competition with R</a><ul>
+<li class="chapter" data-level="3" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html"><i class="fa fa-check"></i><b>3</b> Introduction to Lotka-Volterra Competition with R</a>
+<ul>
 <li class="chapter" data-level="3.1" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html#solving-differential-equations-with-r"><i class="fa fa-check"></i><b>3.1</b> Solving Differential Equations with R</a></li>
 <li class="chapter" data-level="3.2" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html#model-and-parameters"><i class="fa fa-check"></i><b>3.2</b> Model and Parameters</a></li>
 <li class="chapter" data-level="3.3" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html#evaluating-the-model-time-series"><i class="fa fa-check"></i><b>3.3</b> Evaluating the model – time series</a></li>
@@ -153,7 +177,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.5" data-path="introduction-to-lotka-volterra-competition-with-r.html"><a href="introduction-to-lotka-volterra-competition-with-r.html#now-plot-the-isoclines"><i class="fa fa-check"></i><b>3.5</b> Now plot the isoclines</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="definitions.html"><a href="definitions.html"><i class="fa fa-check"></i><b>4</b> Definitions</a></li>
-<li class="chapter" data-level="5" data-path="resource.html"><a href="resource.html"><i class="fa fa-check"></i><b>5</b> Resources</a><ul>
+<li class="chapter" data-level="5" data-path="resource.html"><a href="resource.html"><i class="fa fa-check"></i><b>5</b> Resources</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="resource.html"><a href="resource.html#books"><i class="fa fa-check"></i><b>5.1</b> Books</a></li>
 <li class="chapter" data-level="5.2" data-path="resource.html"><a href="resource.html#websites"><i class="fa fa-check"></i><b>5.2</b> Websites</a></li>
 <li class="chapter" data-level="5.3" data-path="resource.html"><a href="resource.html#videos"><i class="fa fa-check"></i><b>5.3</b> Videos</a></li>
@@ -178,60 +203,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="dynamical-systems-theory-getting-started" class="section level1">
+<div id="dynamical-systems-theory-getting-started" class="section level1" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Dynamical Systems Theory – Getting Started</h1>
 <p>Here is a brief overview of some important steps to follow when starting
 with any new system of equations. Our computers can do these steps
 easily, and you now have code to do this, but it’s good to practice
 these by hand for simple systems (one- and two-dimensions) to help your
 understanding of these models.</p>
-<p>I (Carling Bieg) have <span class="underline">underlined</span> important terms throughout this
+<p>I (Carling Bieg) have <u>underlined</u> important terms throughout this
 document, and made a list below so that you can review them and begin
 making your own definition table. This is by no means an exhaustive list
 of important terms for dynamical systems theory, but is important for
 these steps described below. We will add to this as we go on.</p>
 <ol style="list-style-type: decimal">
 <li><p>Start with the equation(s) describing a system – these describe the
-rate of change over time, <em>t</em>, in density of our <span class="underline">state
-variable</span>(s), or population(s). Let’s say we have one
+rate of change over time, <em>t</em>, in density of our <u>state
+variable</u>(s), or population(s). Let’s say we have one
 resource population; we can call this equation <span class="math inline">\(f_R\)</span>.</p></li>
 <li><p>Set <span class="math inline">\(f_R\)</span> to 0 and solve for R. This tells us when the rate of change
 is 0, and therefore the population is at an
-<span class="underline">equilibrium</span>. Often we refer to these solutions as <span class="math inline">\(\mathbb{R}^\ast\)</span>.</p>
+<u>equilibrium</u>. Often we refer to these solutions as <span class="math inline">\(\mathbb{R}^\ast\)</span>.</p>
 <p>Note that with multiple state variables (e.g., a C-R model), our
 solutions will lead to functions (e.g., lines, curves) that depend
 on the other state variable(s) rather than just fixed points. These
-are what we call zero-growth <span class="underline">isoclines</span>, also referred
-to as <span class="underline">nullclines</span>. Our equilibria (<span class="math inline">\(C^\ast\)</span>, <span class="math inline">\(R^\ast\)</span>) are where
+are what we call zero-growth <u>isoclines</u>, also referred
+to as <u>nullclines</u>. Our equilibria (<span class="math inline">\(C^\ast\)</span>, <span class="math inline">\(R^\ast\)</span>) are where
 these clines intersect, such that the rate of change each state
 variable is 0.</p></li>
 </ol>
 <ul>
 <li><p>At this point it can be useful to plot these equilibrium solutions
-in <span class="underline">state space</span>. In a one-dimensional case, we can
+in <u>state space</u>. In a one-dimensional case, we can
 visualize our solutions on a line (one dimension), and in multiple
 dimensions we plot our clines as functions of our state variables in
 this space (e.g., solutions of C as a function of R for a
 two-dimensional C-R model).</p></li>
 <li><p>One we have our solutions plotted, we can immediately see how each
-of the <span class="underline">parameters</span> in our model affect the equilibria
-and begin to visualize where we may see <span class="underline">bifurcations</span>.</p></li>
-<li><p>It is also useful to plot <span class="underline">trajectories</span> or <span class="underline">vector
-fields</span> on each of these clines and around our
+of the <u>parameters</u> in our model affect the equilibria
+and begin to visualize where we may see <u>bifurcations</u>.</p></li>
+<li><p>It is also useful to plot <u>trajectories</u> or <u>vector
+fields</u> on each of these clines and around our
 equilibria. Keep in mind that trajectories will only point in one
 dimension directly on the clines, so note that the geometry of the
 isoclines importantly affects the dynamics. Visually piecing
-together the entire <span class="underline">phase space</span> immediately tells us a
+together the entire <u>phase space</u> immediately tells us a
 lot about stability before we even move on to the next steps!</p></li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
-<li>Next we want to <span class="underline">linearize</span> the system by taking the
+<li>Next we want to <u>linearize</u> the system by taking the
 partial derivatives of our equations with respect to each of the
 state variables. Note that in a one-dimensional system (e.g., <span class="math inline">\(f_R\)</span>),
 we just need to take the derivative (i.e., $). We put this in
 matrix form such that for every dimension, <em>n</em>, of our system we get
-an <em>n</em> x <em>n</em> matrix, which we call the <span class="underline">Jacobian
-matrix</span>. For a two-dimensional system (e.g., <span class="math inline">\(f_R\)</span> and <span class="math inline">\(f_C\)</span>),
+an <em>n</em> x <em>n</em> matrix, which we call the <u>Jacobian
+matrix</u>. For a two-dimensional system (e.g., <span class="math inline">\(f_R\)</span> and <span class="math inline">\(f_C\)</span>),
 this will be in the form:</li>
 </ol>
 <p><span class="math display">\[\begin{pmatrix}
@@ -240,19 +265,19 @@ this will be in the form:</li>
 \end{pmatrix}\]</span></p>
 <p>Once we have solved for our derivatives, we can substitute in our
 equilibrium solutions. We can do this for each of our equilibria.
-(Remember we always have <span class="underline">trivial equilibria</span> that still
+(Remember we always have <u>trivial equilibria</u> that still
 matter!) This results in a linearization of our model around the
 equilibria.</p>
 <ol start="4" style="list-style-type: decimal">
-<li><p>Now we can calculate our <span class="underline">eigenvalues</span>. In our
+<li><p>Now we can calculate our <u>eigenvalues</u>. In our
 one-dimensional case, the work is done for us. Our eigenvalue is
 simply equal to our derivative (technically this is a 1 x 1 matrix).
 For multiple dimensions we need to do a bit of matrix algebra to
-<span class="underline">diagonalize</span> our matrix, which effectively transforms
+<u>diagonalize</u> our matrix, which effectively transforms
 our matrix to a form that separates the dimensions of our
 eigenvalues. This transformation is as follows...</p>
 <p>Every matrix, <strong>A</strong>, has eigenvalues, λ, and
-<span class="underline">eigenvectors</span>, <strong>v</strong>, such that</p>
+<u>eigenvectors</u>, <strong>v</strong>, such that</p>
 <p><strong>Av</strong> = λ<strong>v</strong></p>
 <p>This can be re-written as follows:</p>
 <p><strong>Av</strong> – λ<strong>v</strong> = 0</p>
@@ -264,13 +289,13 @@ eigenvalues. This transformation is as follows...</p>
 <p>Finally, as long as <strong>v</strong> is non-zero, then this will only have a
 solution if:</p>
 <p>|<strong>A</strong> – λ<strong>I</strong>| = 0</p>
-<p>This equation is referred to as the <span class="underline">characteristic
-equation</span> of <strong>A</strong> and is an <em>n</em><sup>th</sup> order
-<span class="underline">polynomial</span> in λ with <em>n</em> distinct (but not necessarily
+<p>This equation is referred to as the <u>characteristic
+equation</u> of <strong>A</strong> and is an <em>n</em><sup>th</sup> order
+<u>polynomial</u> in λ with <em>n</em> distinct (but not necessarily
 unique) roots.</p>
 <p>Using the characteristic equation of our Jacobian matrix, we can now
 solve for our eigenvalues associated with each equilibrium. To do
-this, we take the <span class="underline">determinant</span> of our (<strong>A</strong>- λ<strong>I</strong>)
+this, we take the <u>determinant</u> of our (<strong>A</strong>- λ<strong>I</strong>)
 matrix. Note that this diagonalization has simply transformed this
 to be our Jacobian matrix with λ subtracted in the diagonals, but it
 is good to know where this transformation comes from. Finally we can
@@ -280,9 +305,9 @@ now use simple algebra to solve the resulting polynomial for λ.</p></li>
 <p>For a 2 x 2 matrix, <strong>A</strong>, of the form</p>
 <p><strong>A</strong> = <span class="math inline">\(\begin{pmatrix} a &amp; b \\ c &amp; d \\ \end{pmatrix}\)</span></p>
 <p>The determinant, det(<strong>A</strong>) or |<strong>A</strong>|, is equal to (<em>ad</em>) - (<em>bc</em>).
-In this case, the determinant gives us a <span class="underline">quadratic
-equation</span>, which we can solve using the <span class="underline">quadratic
-formula</span>:</p>
+In this case, the determinant gives us a <u>quadratic
+equation</u>, which we can solve using the <u>quadratic
+formula</u>:</p>
 <p>If a quadratic equation has the form: <em>x</em> λ<sup>2</sup> + <em>y</em> λ + <em>z</em> = 0</p>
 <p>Then λ = <span class="math inline">\(\frac{- y\  \pm \ \sqrt{}(y^{2} - 4xz)}{2x}\)</span></p>
 <p>Note that for more information, any linear algebra textbook should
